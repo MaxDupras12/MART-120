@@ -1,0 +1,33 @@
+<html>
+    <title>Page 2</title>
+    <head></head>
+    <body>
+        <h1>Poem</h1>
+        <p></p>
+        <h1>I Belong There by Mahmoud Darwish</h1>
+
+        <p>I belong there. I have many memories.</p>
+        
+        <p>I was born as everyone is born.</p>
+        
+        <p>I have a mother, a house with many windows, brothers, friends, and a prison cell
+            with a chilly window! </p>
+        
+        <p>I have a saturated meadow. In the deep horizon of my word, I have a moon,
+            a bird's sustenance, and an immortal olive tree.</p>
+        
+        <p>I have lived on the land long before swords turned man into prey.
+            I belong there. When heaven mourns for her mother, I return heaven to
+            her mother.</p>
+        
+        <p>And I cry so that a returning cloud might carry my tears.</p>
+        
+        <p>To break the rules, I have learned all the words needed for a trial by blood.
+            I have learned and dismantled all the words in order to draw from them a
+            single word: Home.</p>
+
+        <p><a href="page1.html">Home Page</a></p>
+        <p><a href="page3.html">Contact Us Page</a></p>
+
+    </body>
+</html>
