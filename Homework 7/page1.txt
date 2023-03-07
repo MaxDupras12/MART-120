@@ -1,0 +1,42 @@
+body{
+                font-family:'Times New Roman', serif;
+            }
+            h1{
+                
+                color:navyblue;
+            }
+
+            h2{
+                color:sunsetred;
+            }
+            ol{
+                list-style-type: circle;
+            }
+        </style>
+<html>
+    <title>First Page</title>
+    <head></head>
+    <body bgcolor="grey">
+        <h1>This is my first web page.</h1>
+        <b>This is a bolded statement</b><br>
+           <i> and here is more text</i><br>
+            <u>and more</u>
+        <h2>These are my favorite games</h2>
+            <ol>
+                <li>Fortnite</li>
+                <li>Genshin Impact</li>
+                <li>Peggle 2</li>
+            </ol>
+        <h2>Restaurants</h2>
+            <ul>
+                <li><a href="https://www.veeradonuts.com/" target="_new">Donuts</a></li>
+                <li>Burritos</li>
+                <li>Biscuits and Gravy</li>
+            </ul>
+        <h3>Favorite Websites</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/" target="_new">
+                <li><a href="https://www.espn.com/watch/espnplus/?om-navmethod=topnav/" target="_new"></a>
+                <li><a href="https://www.sporcle.com/" target="_new">
+    </body>
+</html>
