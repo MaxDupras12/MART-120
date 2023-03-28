@@ -1,1 +1,54 @@
 
+function setup()
+{
+    createCanvas(400, 400);
+}
+
+function draw()
+{
+    background(120,40,70);
+    textSize(22)
+    text("What's up!", 10,80);
+
+    // head
+    fill(200, 200, 10);
+    circle(250,100,100);
+   
+    // eyes
+    strokeWeight(10);
+    fill(10);
+    point(200,80);
+    point(285,80);
+
+    // nose
+    point(200,80);
+    
+    // mouth
+    ellipse(200, 100, 30, 40)
+
+    // hair
+    line(130,100,100,50);
+    line(305,50,300,100);
+    // body
+    fill(10, 20, 100);
+    rect(200,200,100,100);
+    
+    // decoration
+    fill(205);
+    triangle(200,300,200,200,280,300)
+    // right arm
+    fill(10, 20, 100);
+    rect(300,100,50,10);
+    // left arm
+    rect(150,100,50,10);
+    // left leg
+    rect(200,300,10,50);
+    // right leg
+    rect(200,300,10,50);
+    
+    fill(120);
+    textSize(20);
+    text("Max Dupras",200,500 );
+
+
+}
