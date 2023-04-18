@@ -1,0 +1,158 @@
+
+var characterX = 120;
+var characterY = 120;
+
+var w = 50; 
+var s = 56;
+var a = 45;
+var d = 67;
+
+var shapeX = 20;
+var shapeY = 25;
+var shapeXSpeed;
+var shapeYSpeed;
+
+
+var mouseShapeX;
+var mouseShapeY;
+function setup()
+{
+    createCanvas(500, 600);
+   
+    shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    createCharacter(600,700);
+}
+
+function draw()
+{
+    background(100,50,45);
+    stroke(1);
+    fill(1);
+    
+  
+    createBorders(20);
+
+   
+    textSize(25);
+    text("LEAVE", width-55,height-55)
+
+    //createCharacter(150,250);
+    drawCharacter();
+    characterMovement();
+
+
+    
+    fill(17,120,20);
+
+    circle(shapeX, shapeY, 15);
+
+    
+     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+
+  
+    shapeX += shapeXSpeed;
+    shapeY += shapeYSpeed;
+  
+    if(shapeX > width)
+    {
+        shapeX = 0;
+    }
+    if(shapeX < 0)
+    {
+        shapeX = width;
+    }
+    if(shapeY > height)
+    {
+        shapeY = 0;
+    }
+    if(shapeY < 0)
+    {
+        shapeY = height;
+    }
+
+   
+    if(characterX > width && characterY > width-60)
+    {
+        fill(5);
+        stroke(5);
+        textSize(24);
+        text("You Win!", width/2-50, height/2-50);
+    }
+
+    
+    fill(120,130,140);
+    circle(mouseShapeX, mouseShapeY, 25);
+}
+
+function characterMovement()
+{
+    // handle the keys
+    if(keyIsDown(w))
+    {
+        characterY -= 10;   
+    }
+    if(keyIsDown(s))
+    {
+        characterY += 10;   
+    }
+    if(keyIsDown(a))
+    {
+        characterX -= 10;   
+        console.log("movement: " + characterX);
+    }
+    if(keyIsDown(d))
+    {
+        characterX += 10;   
+    }
+}
+function createCharacter(x,y)
+{
+    characterX = x;
+    characterY = y;
+    console.log(characterX);
+    //character
+    
+   // circle(characterX,characterY,50);
+}
+
+function drawCharacter()
+{
+    fill(23,40,123);
+    circle(characterX,characterY,25);
+}
+function createBorders(thickness)
+{
+    // top border
+    rect(0,0,width,thickness);
+    // left border
+    rect(0,0,thickness,height);
+    // bottom border
+    rect(0, height-thickness,width, thickness);
+    // right upper border
+    rect(width-thickness,0,thickness,height-50);
+}
+
+function mouseClicked()
+{
+    mouseShapeX = mouseX;
+    mouseShapeY = mouseY;
+}
+/*
+function keyPressed() {
+    if (keyCode === LEFT_ARROW) {
+        characterX -= 10;
+    } 
+    else if (keyCode === RIGHT_ARROW) {
+        characterX += 10;
+    }
+    else if (keyCode === UP_ARROW) {
+        characterY -= 10;
+    }
+    else if (keyCode === DOWN_ARROW) {
+        characterY += 10;
+    }
+
+  }
+  */
