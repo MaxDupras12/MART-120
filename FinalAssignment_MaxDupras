@@ -1,0 +1,74 @@
+var x = 0;
+var y = 0;
+var gap = 30;
+var deg = 90;
+var color2 = 'skyblue';
+
+function setup() {
+	createCanvas(600,600);
+	background(35);
+	frameRate(60);
+	
+}
+
+function mousePressed() { 
+	color2 = 'yellow'; 
+}
+
+function mouseReleased() { 
+	color2 = 'skyblue'; 
+}
+
+
+
+function draw() {
+	spin();
+	maze();
+	grid();
+}
+
+function maze() { 
+	
+	stroke(color2);
+	strokeWeight(100);
+	if (random(2) < 0.5) { 
+	line(x, y, x + gap, y + gap);
+	} else {
+	line(x, y + gap, x + gap, y);
+	}
+	
+	x = x+ 10; 
+	if (x > width) {
+	x = 0;
+	y = y + gap;
+	}
+	
+}
+
+function grid() {
+	
+	for ( var i = 10; i < windowWidth; i += 45 ) {
+	for ( var j = 20; j < windowHeight; j += 45 ) {
+	noStroke();
+	fill(color2);
+	rotate(PI);
+	square(30, 20, 55);
+					
+		}
+	}
+}
+					
+function spin() { 
+	push();
+	scale(1);
+	translate(width/2,height/2);
+	rotate(radians(deg));
+	deg++;
+	fill(color2);
+	rect(0,0,200,100);
+	pop();
+	}
+
+ 
+
+
